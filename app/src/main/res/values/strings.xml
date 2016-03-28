@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SyncAdapterTest</string>
+    <string name="content_authority">com.example.syncadapter</string>
+    <string name="sync_account_type">com.example.syncadapter</string>
+    <string name="sync_btn">Sync Test</string>
+</resources>
