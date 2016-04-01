@@ -18,7 +18,7 @@ public class SyncService extends Service {
     @Override
     public void onCreate() {
         Log.d("Sync", "Sync Service Start");
-        Toast.makeText(getApplicationContext(), "onPreform Sync Start", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Syn Service Start", Toast.LENGTH_LONG).show();
         synchronized (sSyncAdapterLock){
             if (sSyncAdapter == null){
                 sSyncAdapter = new SyncAdapter(getApplicationContext(),true);

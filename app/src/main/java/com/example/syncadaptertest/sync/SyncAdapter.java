@@ -35,7 +35,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED,true);
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
         Account account = getSyncAccount(context);
-        ContentResolver.setIsSyncable(account,context.getString(R.string.content_authority),1);
+        //ContentResolver.setIsSyncable(account,context.getString(R.string.content_authority),1);
         ContentResolver.requestSync(
                 account,
                 context.getString(R.string.content_authority),

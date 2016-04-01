@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -21,8 +23,9 @@
             </intent-filter>
         </activity>
         <provider
-            android:authorities="com.example.syncadaptertest.provider"
+            android:authorities="com.example.syncadapter"
             android:name=".DummyContentProvider"
+            android:enabled="true"
             android:exported="false"
             android:syncable="true" />
         <service
@@ -36,7 +39,8 @@
         </service>
         <service
             android:name=".sync.SyncService"
-            android:exported="true">
+            android:exported="true"
+            android:process=":sync">
             <intent-filter>
                 <action android:name="android.content.SynAdapter"/>
             </intent-filter>

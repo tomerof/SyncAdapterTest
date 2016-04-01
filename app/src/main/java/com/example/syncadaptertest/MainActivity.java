@@ -1,5 +1,7 @@
 package com.example.syncadaptertest;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button syncBtn = (Button)findViewById(R.id.sync_btn);
+
         assert syncBtn != null;
         syncBtn.setOnClickListener(new View.OnClickListener() {
             @Override
